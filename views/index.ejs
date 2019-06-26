@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+    />
+
+    <link rel="stylesheet" href="/css/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+  </head>
+  <body>
+    <div
+      style="width: 100px; height: 100px; position: fixed; left: 0; top: 0; display: flex; background-color: #076483; z-index: 300; align-items: center; justify-content: center"
+      id="refresh"
+    >
+      <span>🏠</span>
+    </div>
+    <div id="splash" class="screen">
+      <div class="flex-2 content-center text-center">
+        <div>
+          <span class="title"> &nbsp;하늘은 오늘、 </span><br />
+          ~방귀대장 뿡뿡이~
+        </div>
+      </div>
+      <div class="bg-white flex-3">
+        <div id="slick" style="height: 100%;">
+          <div style="width: 100%; height: 100%;">
+            <iframe
+              src="https://earth.nullschool.net/#current/wind/surface/level/orthographic=-232.18,37.12,5000"
+              frameborder="0"
+              style="width: 100%; height: 100%;"
+              id="iframeSky"
+            ></iframe>
+          </div>
+          <div
+            class="slick-image"
+            style="background-image: url('/img/1.png');"
+          ></div>
+          <div
+            class="slick-image"
+            style="background-image: url('/img/2.png');"
+          ></div>
+        </div>
+      </div>
+      <div class="flex-1 content-center">
+        <div class="flex vertical-middle">
+          <div>
+            <img
+              src="/img/shop.png"
+              alt=""
+              style="max-width: 128px; height: auto;"
+            />
+          </div>
+          <div>
+            <span class="text-bold">
+              계속하려면 멤버십 카드를 태그하거나<br />화면을 터치하세요.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="store" class="screen">
+      <div class="flex-1"></div>
+      <div class="flex flex-3 bg-white">
+        <div class="category">
+          <div class="category-item selected">
+            마스크
+          </div>
+          <div class="category-item">
+            티슈/미용
+          </div>
+          <div class="category-item">
+            손세정제
+          </div>
+        </div>
+        <div class="goods">
+          <div class="goods-item">
+            <div class="goods-item-inside">
+              <div
+                class="goods-item-image"
+                style="background-image: url('/img/pollution.png')"
+              ></div>
+              <div class="goods-item-name">
+                마스크(중)
+              </div>
+              <div class="goods-item-price">
+                900
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex-1">
+        <div class="summary">
+          <div>
+            <a href="#buy" class="button">
+              구매하기
+            </a>
+          </div>
+          <div class="text-right pd-1">
+            선택한 제품의 금액:<br />
+            <span class="summary-price">0</span> P
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="screen" id="buy">
+      <div class="flex-1"></div>
+      <div class="flex-4 bg-white content-center">
+        <div class="text-center">
+          <span class="title"> 구매하신 상품을<br />아래에서 받아주세요. </span>
+        </div>
+      </div>
+      <div class="flex-1"></div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script src="/js/common.js"></script>
+  </body>
+</html>
